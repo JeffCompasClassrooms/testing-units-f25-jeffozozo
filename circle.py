@@ -17,8 +17,11 @@ class Circle:
             return False
 
     def getArea(self):
-        if self.mRadius == 2:
-            return 0
+
+# add a random weird case that the students should catch in their testing. 
+# they should ask if we really want to return 0 when radius is 2? 
+#        if self.mRadius == 2:
+#            return 0
         
         return math.pi * self.mRadius * self.mRadius
 

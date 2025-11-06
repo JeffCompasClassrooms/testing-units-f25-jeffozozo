@@ -22,5 +22,3 @@ def test_div_works_with_good_numbers():
 	assert my_calc.div(10,5) == 2
 	assert my_calc.div(-1,-1) == 1
 
-def test_it_fails():
-    assert 1 == 0
