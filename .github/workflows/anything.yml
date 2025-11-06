@@ -4,18 +4,20 @@ on:
     branches:
       - main
 
-  jobs:
-    RunUnitTests:
-    runs-on: ubuntu-latest
+jobs:
+  RunUnitTests:
+  runs-on: ubuntu-latest
 
-    - name: checkout code
-      run: actions/checkout@v4
+  steps:
 
-    - name: install pytest
-      run: pip install pytest pytest-spec pytest-describe
+  - name: checkout code
+    run: actions/checkout@v4
 
-    - name: run tests
-      run: pytest --spec
+  - name: install pytest
+    run: pip install pytest pytest-spec pytest-describe
+
+  - name: run tests
+    run: pytest --spec
 
 
 
