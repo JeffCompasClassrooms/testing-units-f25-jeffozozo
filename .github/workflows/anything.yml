@@ -13,10 +13,17 @@ jobs:
     - name: install pytest
       run: pip install pytest pytest-spec pytest-describe
 
-    - name: run tests
+    - name: run pytest
       run: pytest --spec
 
+    - name: install coverage
+      run: pip install coverage
 
+    - name: run coverage
+      run: coverage run -m pytest
+
+    - name: print report
+      run: coverage report --omit="test_*.py"
 
 
    
