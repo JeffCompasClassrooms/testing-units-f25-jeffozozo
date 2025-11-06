@@ -20,11 +20,9 @@ jobs:
       run: pip install coverage
 
     - name: run coverage
-      run: coverage run -m pytest
+      run: coverage run --source=calc,circle -m pytest
 
     - name: print report
-      run: coverage report --omit="test_*.py"
-
-
+      run: coverage report
    
 
